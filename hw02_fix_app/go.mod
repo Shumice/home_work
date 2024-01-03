@@ -1,3 +1,3 @@
-module hw02_fix_app
+module github.com/Shumice/home_work/hw02_fix_app
 
-go 1.20
+go 1.21

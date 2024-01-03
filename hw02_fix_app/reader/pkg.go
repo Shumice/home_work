@@ -3,9 +3,10 @@ package reader
 import (
 	"encoding/json"
 	"fmt"
-	"hw02_fix_app/types"
 	"io"
 	"os"
+
+	"github.com/Shumice/home_work/hw02_fix_app/types"
 )
 
 func ReadJSON(filePath string, limit int) ([]types.Employee, error) {
@@ -17,7 +18,7 @@ func ReadJSON(filePath string, limit int) ([]types.Employee, error) {
 	bytes, err := io.ReadAll(f)
 	if err != nil {
 		fmt.Printf("Error: %v", err)
-		return nil, nil
+		return nil, err
 	}
 
 	var data []types.Employee
