@@ -1,3 +1,3 @@
-module hw03_chessboard
+module github.com/Shumice/home_work/hw03_chessboard
 
-go 1.21.5
+go 1.21
