@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"hw02_fix_app/printer"
-	"hw02_fix_app/reader"
-	"hw02_fix_app/types"
+
+	"github.com/Shumice/home_work/hw02_fix_app/printer"
+	"github.com/Shumice/home_work/hw02_fix_app/reader"
+	"github.com/Shumice/home_work/hw02_fix_app/types"
 )
 
 func main() {
-	var path string = "data.json"
+	path := "data.json"
 
 	fmt.Printf("Enter data file path: ")
 	fmt.Scanln(&path)
@@ -18,10 +19,9 @@ func main() {
 
 	if len(path) == 0 {
 		path = "data.json"
-
 	}
 
-	staff, err = reader.ReadJSON(path, -1)
+	staff, err = reader.ReadJSON(path)
 
 	fmt.Print(err)
 
