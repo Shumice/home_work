@@ -9,40 +9,50 @@ type Book struct {
 	rate   float32
 }
 
-func (b *Book) setId(id int) {
+func (b *Book) SetID(id int) {
 	b.id = id
 }
-func (b *Book) setTitle(title string) {
+
+func (b *Book) SetTitle(title string) {
 	b.title = title
 }
-func (b *Book) setAuthor(author string) {
+
+func (b *Book) SetAuthor(author string) {
 	b.author = author
 }
-func (b *Book) setYear(year uint16) {
+
+func (b *Book) SetYear(year uint16) {
 	b.year = year
 }
-func (b *Book) setSize(size int) {
+
+func (b *Book) SetSize(size int) {
 	b.size = size
 }
-func (b *Book) setRate(rate float32) {
+
+func (b *Book) SetRate(rate float32) {
 	b.rate = rate
 }
 
 func (b *Book) ID() int {
 	return b.id
 }
+
 func (b *Book) Title() string {
 	return b.title
 }
+
 func (b *Book) Author() string {
 	return b.author
 }
+
 func (b *Book) Year() uint16 {
 	return b.year
 }
+
 func (b *Book) Size() int {
 	return b.size
 }
+
 func (b *Book) Rate() float32 {
 	return b.rate
 }
@@ -81,5 +91,4 @@ func (c *Comparator) Compare(book *Book, book2 *Book) bool {
 }
 
 func main() {
-
 }
