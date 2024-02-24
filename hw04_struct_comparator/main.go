@@ -9,7 +9,6 @@ type Book struct {
 	rate   float32
 }
 
-// Set методы
 func (b *Book) setId(id int) {
 	b.id = id
 }
@@ -29,8 +28,7 @@ func (b *Book) setRate(rate float32) {
 	b.rate = rate
 }
 
-// Get методы
-func (b *Book) Id() int {
+func (b *Book) ID() int {
 	return b.id
 }
 func (b *Book) Title() string {
@@ -58,11 +56,19 @@ const (
 )
 
 type Comparator struct {
-	CompareFunc Enums
+	compareFunc Enums
+}
+
+func NewComparator(year uint16, size int, rate float32) *Book {
+	return &Book{
+		year: year,
+		size: size,
+		rate: rate,
+	}
 }
 
 func (c *Comparator) Compare(book *Book, book2 *Book) bool {
-	switch c.CompareFunc {
+	switch c.compareFunc {
 	case Year:
 		return book.year > book2.year
 	case Size:
