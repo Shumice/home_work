@@ -69,12 +69,8 @@ type Comparator struct {
 	compareFunc Enums
 }
 
-func NewComparator(year uint16, size int, rate float32) *Book {
-	return &Book{
-		year: year,
-		size: size,
-		rate: rate,
-	}
+func NewComparator() *Comparator {
+	return &Comparator{}
 }
 
 func (c *Comparator) Compare(book *Book, book2 *Book) bool {
